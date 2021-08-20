@@ -9,12 +9,13 @@
     position: absolute;
     width: 100px;
     top: 400px;
+    left: 200px;
   }
   
   .baloon {
       position: absolute;
       left: 200px;
-      z-index: 3;
+      z-index: 4;
   
   }
   
@@ -23,11 +24,13 @@
     font-size: 25px;
     top: 130px;
     left: 220px;
-    z-index: 4;
+    z-index: 5;
   }
   
   .bowser {
     position: absolute;
     width: 200px;
-    z-index: 5;
+    top: 250px;
+    left: 470px;
+    z-index: 3;
   }
