@@ -32,12 +32,25 @@
 // }
 
 // exercício 4
-const numberAleatory = -5;
+// const numberAleatory = -5;
 
-if (numberAleatory > 0) {
-    console.log("positive")
-} else if (numberAleatory < 0) {
-    console.log("negative")
+// if (numberAleatory > 0) {
+//     console.log("positive")
+// } else if (numberAleatory < 0) {
+//     console.log("negative")
+// } else {
+//     console.log("zero")
+// }
+
+// exercício 5
+const ang1 = 90;
+const ang2 = 90;
+const ang3 = -180;
+
+if (ang1 + ang2 + ang3 === 180) {
+    console.log(true)
+} else if (ang1 || ang2 || ang3 < 0) {
+    console.log("ERRO")
 } else {
-    console.log("zero")
+    console.log(false)
 }
