@@ -19,14 +19,25 @@
 // }
 
 // exercício 3
-const num1 = 3
-const num2 = 6
-const num3 = 2
+// const num1 = 3;
+// const num2 = 6;
+// const num3 = 2;
 
-if (num1 > num2 && num1 > num3) {
-    console.log(num1)
-} else if (num2 > num1 && num2 > num3) {
-    console.log(num2)
+// if (num1 > num2 && num1 > num3) {
+//     console.log(num1)
+// } else if (num2 > num1 && num2 > num3) {
+//     console.log(num2)
+// } else {
+//     console.log(num3)
+// }
+
+// exercício 4
+const numberAleatory = -5;
+
+if (numberAleatory > 0) {
+    console.log("positive")
+} else if (numberAleatory < 0) {
+    console.log("negative")
 } else {
-    console.log(num3)
+    console.log("zero")
 }
