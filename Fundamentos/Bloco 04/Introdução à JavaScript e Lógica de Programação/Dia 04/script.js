@@ -77,6 +77,17 @@
 // console.log(verificaPalindrome("nathan"))
 
 
-
+// exercicio 2
+// let arrayTests = [2, 3, 6, 7, 10, 1];
+// let maiorNumber = arrayTests[0];
+// function indiceMaiorNumber(array) {
+//  for (let index = 1; index < array.length; index += 1) {
+//    if (array[index] > maiorNumber) {
+//      maiorNumber = index     
+//    }
+//  }
+//  return maiorNumber
+// }
+// console.log (indiceMaiorNumber(arrayTests))
 
 
