@@ -62,4 +62,21 @@
 //   console.log(info[index] + " e " + segundoObjeto[index])
 // }
 
+// Parte 2 
+
+// exercicio 1
+// function verificaPalindrome(string) {
+  
+// if (string === string.split("").reverse().join("")) {
+//   return true;
+// } else {
+//   return false;
+// }
+// }
+
+// console.log(verificaPalindrome("nathan"))
+
+
+
+
 
