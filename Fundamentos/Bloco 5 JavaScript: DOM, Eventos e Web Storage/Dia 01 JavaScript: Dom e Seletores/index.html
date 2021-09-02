@@ -73,6 +73,20 @@ function changeColorIn (color) {
 }
 changeColorIn("white")
 
+function correctText () {
+  let textFail = document.getElementsByTagName("h1")[0];
+  if (textFail !== "Exercício 5.1 - JavaScript") {
+    document.getElementsByTagName("h1")[0].innerText = "Exercício 5.1 - JavaScript"
+  }
+}
+
+correctText()
+
+function upperCase () {
+ let tagP = document.getElementsByTagName('p')[0];
+  tagP.innerText = tagP.innerText.toUpperCase();
+}
+
 
 
     </script>
