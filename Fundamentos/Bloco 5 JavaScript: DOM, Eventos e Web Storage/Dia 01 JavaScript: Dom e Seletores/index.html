@@ -86,7 +86,15 @@ function upperCase () {
  let tagP = document.getElementsByTagName('p')[0];
   tagP.innerText = tagP.innerText.toUpperCase();
 }
+upperCase ()
 
+function printP () {
+  let tagP = document.getElementsByTagName('p')
+  for (let index = 0; index < tagP.length; index += 1) {
+    console.log(tagP[index]);
+  }
+}
+printP ()
 
 
     </script>
