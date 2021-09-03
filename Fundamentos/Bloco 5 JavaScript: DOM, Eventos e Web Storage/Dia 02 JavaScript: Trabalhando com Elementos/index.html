@@ -60,10 +60,14 @@
       // exercício 1 - Adicionar Tag h1 com texto sendo filha de body
       const createHone = document.createElement('h1')
       createHone.innerText = 'Exercício 5.2 - JavaScript DOM';
-      let body = document.querySelector('body')
-      body.appendChild(createHone);
+      let bodyTag = document.querySelector('body')
+      bodyTag.appendChild(createHone);
       // exercício 2 - Adicionar a tag main com a classe main-content como filho da tag body
-
+      let mainTag = document.createElement('main');
+      mainTag.className = 'main-content';
+      bodyTag.appendChild(mainTag);
+      // exercício 3 - Adicionar a tag section com a classe center-content como filho da tag main
+      
     </script>
   </body>
 </html>
