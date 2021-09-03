@@ -1,0 +1,30 @@
+<main id="paiDoPai">
+  <section id="pai">
+    <section id="primeiroFilho"></section>
+    <section id="elementoOndeVoceEsta">
+      <section id="primeiroFilhoDoFilho"></section>
+      <section id="segundoEUltimoFilhoDoFilho"></section>
+    </section>
+    Atenção!
+    <section id="terceiroFilho"></section>
+    <section id="quartoEUltimoFilho"></section>
+  </section>
+  <script>
+  let acessOnde =  document.querySelector("#elementoOndeVoceEsta");
+
+  let colorPai =   document.querySelector("#elementoOndeVoceEsta").parentElement.style.color = "yellow";
+
+  let firstFilho = document.querySelector("#primeiroFilho").innerText = "Sou o Primeiro Filho";
+
+  let acessFirstSon = document.querySelector("#pai").firstElementChild;
+
+  let acessBackElement = document.querySelector("#elementoOndeVoceEsta").previousElementSibling;
+
+  let acessText = document.querySelector("#elementoOndeVoceEsta").nextSibling;
+
+  let acessThirdSon = document.querySelector("#elementoOndeVoceEsta").nextSibling.nextElementSibling;
+
+  let acessThirdSonPai = document.querySelector("#pai").lastElementChild.previousElementSibling;
+
+  </script>
+</main>
