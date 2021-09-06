@@ -116,6 +116,12 @@
       // exercício 1  - Adicione a classe title na tag h1 criada
       let acessTagH1 = document.querySelector('h1');
       acessTagH1.className = 'title';
+      // exercício 2 - Adicione a classe description nas 3 tags h3 criadas
+      let acessTagsH3 = document.querySelectorAll('h3');
+      for (let index = 0; index < 3; index += 1) {
+       acessTagsH3[index].className = 'description';
+      }
+      // exercício 3 - Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() 
     </script>
   </body>
 </html>
