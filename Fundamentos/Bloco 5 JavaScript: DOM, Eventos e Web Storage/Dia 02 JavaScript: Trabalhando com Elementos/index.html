@@ -94,6 +94,25 @@
       let acessSectionTag2 = document.querySelector('.right-content');
       acessSectionTag2.appendChild(ulTag);
       // exercício 9 - Adicione 3 tags h3 , todas sendo filhas do main
+      for (let index = 3; index > 0; index -= 1) {
+        switch (index) {
+          case 3:
+            let h3Tag = document.createElement('h3');
+            acessMain.appendChild(h3Tag);
+            break;
+          case 2: 
+            let h3Tag1 = document.createElement('h3');
+            acessMain.appendChild(h3Tag1);
+            break;
+          case 1:
+            let h3Tag2 = document.createElement('h3');
+            acessMain.appendChild(h3Tag2);
+            break;
+          default:
+            break;
+        }        
+      }
+      
     </script>
   </body>
 </html>
