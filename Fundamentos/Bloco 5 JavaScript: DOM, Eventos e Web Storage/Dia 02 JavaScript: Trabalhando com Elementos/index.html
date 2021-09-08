@@ -89,10 +89,21 @@
       let acessSectionTag1 = document.querySelector('.left-content');
       acessSectionTag1.appendChild(imgTag);
       // exercício 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section 
-      let ulTag = document.createElement('ul');
-      ulTag.innerText = 'um,dois,três,quatro,cinco,seis,sete,oito,nove,dez';
+      let elementUl = document.createElement('ul');
+      let acessSectionTag = document.querySelector('section');
+      acessSectionTag.appendChild(elementUl);
+      let arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+        'Sete', 'Oito', 'Nove', 'Dez']
+      for (let num in arrayNumbers) {
+        let elementLi = document.createElement('li');
+        elementLi.innerHTML = arrayNumbers[num];
+        elementUl.appendChild(elementLi);
+      }
+                
+      
+      let acessUl = document.querySelector('ul');
       let acessSectionTag2 = document.querySelector('.right-content');
-      acessSectionTag2.appendChild(ulTag);
+      acessSectionTag2.appendChild(acessUl);
       // exercício 9 - Adicione 3 tags h3 , todas sendo filhas do main
       for (let index = 3; index > 0; index -= 1) {
         switch (index) {
@@ -127,6 +138,11 @@
       acessSectionTag2.style.marginRight = 'auto';
       // exercício 5 - Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde
       acessMain.style.backgroundColor = 'green';
+      // exercício 6 - Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8
+      let acessLiLast = document.querySelector('ul').lastElementChild;
+      let acessLiLast1 = document.querySelector('ul').lastElementChild.previousElementSibling;
+      acessUl.removeChild(acessLiLast);
+      acessUl.removeChild(acessLiLast1);
     </script>
   </body>
 </html>
