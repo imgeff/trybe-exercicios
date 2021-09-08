@@ -8,6 +8,10 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 1. Copie esse arquivo e edite apenas ele;
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento selecionado;
+function adicionaClass (elemento) {
+  elemento.className = 'tech';
+}
+adicionaClass (firstLi)
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
