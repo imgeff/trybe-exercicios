@@ -44,5 +44,14 @@
   
   document.querySelector('#filhoDoFilho-Filho').parentElement.parentElement.nextSibling.nextElementSibling;
   
+
+    let sonsOfPai = document.querySelectorAll('section');
+    for (index = 0; index < sonsOfPai.length; index += 1) {
+      if (sonsOfPai[index] !== acessPai || sonsOfPai !== acessOnde || sonsOfPai !== acessFilhoDoFilho) {
+        sonsOfPai.removeChild(sonsOfPai[index])
+      }
+    }
+
+  
   </script>
 </main>
