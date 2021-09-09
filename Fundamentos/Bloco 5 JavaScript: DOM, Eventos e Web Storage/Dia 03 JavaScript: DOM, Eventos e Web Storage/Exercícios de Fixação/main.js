@@ -3,20 +3,25 @@ const secondLi = document.getElementById('second-li');
 const thirdLi = document.getElementById('third-li');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
+let elementTech = document.querySelector('.tech')
+// events
 
 
 // 1. Copie esse arquivo e edite apenas ele;
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento selecionado;
+
+// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 function adicionaClass (elemento) {
   elemento.className = 'tech';
 }
 adicionaClass (firstLi)
-// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
-
+function altereText () {
+  elementTech.innerText = value.input;
+}
+altereText ();
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portifólio?
