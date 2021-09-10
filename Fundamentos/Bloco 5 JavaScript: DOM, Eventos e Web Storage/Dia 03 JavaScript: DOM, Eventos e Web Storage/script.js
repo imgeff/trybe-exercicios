@@ -42,4 +42,16 @@ function DaysOfCalendary () {
     }
   }
 }
-DaysOfCalendary ()
+DaysOfCalendary ();
+
+// Exercício 2
+ function createButtonHoliday(string) {
+  let button = document.createElement('button'); // Cria a Tag Button
+  button.innerText = string; // Adiciona string como texto de button
+  button.id = 'btn-holiday' // Adiciona id a Button
+  let buttonsContainer = document.querySelector('.buttons-container'); // Captura Div 
+  buttonsContainer.appendChild(button);// Adiciona button como filho de  Div 
+ }
+
+ createButtonHoliday('Feriados');
+ 
