@@ -1,0 +1,57 @@
+<main id="paiDoPai">
+  <section id="pai">
+    <section id="primeiroFilho"></section>
+    <section id="elementoOndeVoceEsta">
+      <section id="primeiroFilhoDoFilho"></section>
+      <section id="segundoEUltimoFilhoDoFilho"></section>
+    </section>
+    Atenção!
+    <section id="terceiroFilho"></section>
+    <section id="quartoEUltimoFilho"></section>
+  </section>
+  <script>
+  let acessOnde =  document.querySelector("#elementoOndeVoceEsta");
+
+  let colorPai =   document.querySelector("#elementoOndeVoceEsta").parentElement.style.color = "yellow";
+
+  let firstFilho = document.querySelector("#primeiroFilho").innerText = "Sou o Primeiro Filho";
+
+  let acessFirstSon = document.querySelector("#pai").firstElementChild;
+
+  let acessBackElement = document.querySelector("#elementoOndeVoceEsta").previousElementSibling;
+
+  let acessText = document.querySelector("#elementoOndeVoceEsta").nextSibling;
+
+  let acessThirdSon = document.querySelector("#elementoOndeVoceEsta").nextSibling.nextElementSibling;
+
+  let acessThirdSonPai = document.querySelector("#pai").lastElementChild.previousElementSibling;
+
+  let acessPai = document.querySelector('#pai')
+
+  let createBrother = document.createElement('section');
+  createBrother.id = "irmaoElementoOndeVoceEsta";
+  acessPai.appendChild(createBrother);
+
+  let sonElementOndeVoceEsta = document.createElement('p');
+  sonElementOndeVoceEsta.id = "Filho-OndeVoceEsta";
+  acessOnde.appendChild(sonElementOndeVoceEsta);
+
+  let acessFilhoDoFilho = document.querySelector("#elementoOndeVoceEsta").firstElementChild
+  let createFilhoDoFilhoFilho = document.createElement('p');
+  createFilhoDoFilhoFilho.id = 'filhoDoFilho-Filho';
+  acessFilhoDoFilho.appendChild(createFilhoDoFilhoFilho);
+
+  
+  document.querySelector('#filhoDoFilho-Filho').parentElement.parentElement.nextSibling.nextElementSibling;
+  
+
+    let sonsOfPai = document.querySelectorAll('section');
+    for (index = 0; index < sonsOfPai.length; index += 1) {
+      if (sonsOfPai[index] !== acessPai || sonsOfPai !== acessOnde || sonsOfPai !== acessFilhoDoFilho) {
+        sonsOfPai.removeChild(sonsOfPai[index])
+      }
+    }
+
+  
+  </script>
+</main>
