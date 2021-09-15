@@ -7,12 +7,17 @@
   <title>Bloco 06</title>
 </head>
 <body>
-  <input type="email" name="email" id="" placeholder="Digite seu e-mail" required autocomplete="off" autofocus> 
+  <form>
+    <label for="email">Email</label>
+  <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required autocomplete="off" autofocus> 
   <br>
-  <input type="password" name="senha" id="" placeholder="Digite sua senha" required>
+  <label for="senha"> Senha</label>
+  <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
   <br>
-  <input type="checkbox" name="aviso" id=""> Lembre-me
-  <button>entrar</button>
+  <label for="lembre-me">Lembre-me</label>
+  <input type="checkbox" name="aviso" id="lembre-me">
+  <button type="submit">entrar</button>
+</form>
   <br>
 </body>
 </html>
