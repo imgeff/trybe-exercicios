@@ -17,3 +17,14 @@ input {
   margin-bottom: 15px;
   text-align: center;
 }
+
+form {
+  text-align: center;
+}
+
+button {
+  padding: 8px;
+  text-align: center;
+  margin-right: 8px;
+  margin-bottom: 50px;
+}

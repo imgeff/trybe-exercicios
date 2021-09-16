@@ -40,6 +40,21 @@
         <label for="appartment">Apartamento</label>
         <input type="radio" name="moradia" id="appartment" required>
       </fieldset>
+      <fieldset>
+        <label for="resume-user">Resumo do Currículo</label>
+        <textarea required name="resume" id="resume-user" cols="30" rows="10" maxlength="100"></textarea>
+        <br>
+        <label for="cargo-user">Cargo</label>
+        <input type="text" name="cargo" id="cargo-user" required maxlength="40">
+        <br>
+        <label for="description-cargo">Descrição do Cargo</label>
+        <input type="text" name="description" id="description-cargo" maxlength="500" required>
+        <br>
+        <label for="date-start">Data de Início</label>
+        <input type="date" name="date" id="date-start" required>
+      </fieldset>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar todos os dados</button>
     </form>
   </main>
 </body>

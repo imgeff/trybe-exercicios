@@ -8,3 +8,9 @@ for (let index = 0; index <= 26; index += 1) {
   option.innerText = estados[index];
   select.appendChild(option);
 }
+
+// date
+let inputDate = document.querySelector('#date-start').value;
+if (inputDate === "") {
+  alert('insira uma data Valída!')
+}
