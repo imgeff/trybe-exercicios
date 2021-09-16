@@ -10,7 +10,18 @@ for (let index = 0; index <= 26; index += 1) {
 }
 
 // date
-let inputDate = document.querySelector('#date-start').value;
-if (inputDate === "") {
-  alert('insira uma data Valída!')
+let buttonSbmt = document.querySelector('#submit')
+let inputDateDay = document.querySelector('#date-day');
+let inputDateMonth = document.querySelector('#date-month');
+let inputDateYear = document.querySelector('#date-year');
+function verificatioData () {
+  if (Number(inputDateDay.value) < 0 || Number(inputDateDay.value) > 31) {
+    alert('insira um dia Valído!')
+  } else if (Number(inputDateMonth.value) < 0 || Number(inputDateMonth.value) > 12) {
+    alert('Insira um Mês Valído')
+  } else if (Number(inputDateYear.value) < 0) {
+    alert('insira um Ano Valído')
+  }
 }
+
+buttonSbmt.addEventListener('click', verificatioData);

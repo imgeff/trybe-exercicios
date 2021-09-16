@@ -50,10 +50,16 @@
         <label for="description-cargo">Descrição do Cargo</label>
         <input type="text" name="description" id="description-cargo" maxlength="500" required>
         <br>
-        <label for="date-start">Data de Início</label>
-        <input type="date" name="date" id="date-start" required>
+        <div id="date-start">
+          <label for="date-day">Dia</label>
+          <input type="text" name="date" id="date-day" required maxlength="2">
+          <label for="date-month">Mês</label>
+          <input type="text" name="date" id="date-month" required maxlength="2">
+          <label for="date-year">Ano</label>
+          <input type="text" name="date" id="date-year" required maxlength="4">
+        </div>
       </fieldset>
-      <button type="submit">Enviar</button>
+      <button type="submit" id="submit">Enviar</button>
       <button type="reset">Limpar todos os dados</button>
     </form>
   </main>

@@ -28,3 +28,8 @@ button {
   margin-right: 8px;
   margin-bottom: 50px;
 }
+
+#date-start {
+  display: inline-block;
+  width: 10%;
+}
