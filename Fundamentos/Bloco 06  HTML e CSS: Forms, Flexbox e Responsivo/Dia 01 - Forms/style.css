@@ -1,0 +1,19 @@
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-weight: 550;
+}
+
+fieldset {
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+  width: 60%;
+  margin: 25px auto;
+}
+
+input {
+  width: 100%;
+  line-height: 2.0em;
+  margin-bottom: 15px;
+  text-align: center;
+}
