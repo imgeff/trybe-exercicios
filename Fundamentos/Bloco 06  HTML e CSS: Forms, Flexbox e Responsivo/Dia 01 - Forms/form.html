@@ -42,17 +42,17 @@
       </fieldset>
       <fieldset>
         <label for="resume-user">Resumo do Currículo</label>
-        <textarea required name="resume" id="resume-user" cols="30" rows="10" maxlength="100"></textarea>
+        <textarea required name="resume" id="resume-user" cols="30" rows="10" maxlength="1000" placeholder="Faça um resumo do Currículo"></textarea>
         <br>
         <label for="cargo-user">Cargo</label>
-        <input type="text" name="cargo" id="cargo-user" required maxlength="40">
+        <input type="text" name="cargo" id="cargo-user" required maxlength="40" placeholder="Digite seu Cargo">
         <br>
         <label for="description-cargo">Descrição do Cargo</label>
-        <input type="text" name="description" id="description-cargo" maxlength="500" required>
+        <input type="text" name="description" id="description-cargo" maxlength="500" required placeholder="Descreva seu Cargo">
         <br>
         <div id="date-start">
           <label for="date-user">Data de Início: </label>
-          <input type="text" name="date" id="date-user" required>
+          <input type="text" name="date" id="date-user" required placeholder="dd/mm/yyyy">
         </div>
       </fieldset>
       <button type="submit" id="submit">Enviar</button>

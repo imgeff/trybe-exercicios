@@ -27,10 +27,78 @@ buttonSubmit.addEventListener('click', validateDate);
 // Criar Função
 function preventButton (event) {
   event.preventDefault();
-  if (document.querySelector('#name-complete').value.length > 40 || document.querySelector('#name-complete').value.length < 1) {
-    alert('Insira entre 1 e 40 caracteres');
-  }
 }
 
 buttonSubmit.addEventListener('click', preventButton)
-// Validação manual
+// Validação Nome
+function validateName() {
+  let inputName = document.querySelector('#name-complete').value;
+  if (inputName.length > 40) {
+    alert('Nome Inválido');
+  }
+}
+buttonSubmit.addEventListener('click', validateName);
+
+// Validação email
+function validateEmail() {
+  let inputEmail = document.querySelector('#email-user').value;
+  if (inputEmail.length > 50) {
+    alert('Email Inválido');
+  }
+}
+
+buttonSubmit.addEventListener('click', validateEmail);
+
+// Validação CPF
+function validateCPF() {
+  let inputCPF = document.querySelector('#cpf-number').value;
+  if (inputCPF.length > 11) {
+    alert('CPF Inválido');
+  }
+}
+buttonSubmit.addEventListener('click', validateCPF);
+
+// Validação Endereço
+function validateAdress() {
+  let inputAdress = document.querySelector('#endereco-user').value;
+  if (inputAdress.length > 500) {
+    alert('Endereço Inválido');
+  }
+}
+buttonSubmit.addEventListener('click', validateAdress);
+
+// Validação Cidade
+function validateCity() {
+  let inputCity = document.querySelector('#city-user').value;
+  if (inputCity.length > 28) {
+    alert('Cidade Inválida');
+  }
+}
+buttonSubmit.addEventListener('click', validateCity);
+
+// Validação Resumo do Currículo
+function validateDescriptioCurriculo() {
+  let inputCurriculo = document.querySelector('#resume-user').value;
+  if (inputCurriculo.length > 1000) {
+    alert('Descrição Inválida');
+  }
+}
+buttonSubmit.addEventListener('click', validateDescriptioCurriculo);
+
+// Validação Cargo
+function validateCargo() {
+  let inputCargo = document.querySelector('#cargo-user').value;
+  if (inputCargo.length > 40) {
+    alert('Cargo Inválido');
+  }
+}
+buttonSubmit.addEventListener('click', validateCargo);
+
+// Validação Descrição do Cargo
+function validateDescriptionCargo() {
+  let inputDsCargo = document.querySelector('#description-cargo').value;
+  if (inputCPF.length > 500) {
+    alert('Descrição Inválida');
+  }
+}
+buttonSubmit.addEventListener('click', validateDescriptionCargo);
