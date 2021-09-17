@@ -10,28 +10,20 @@ for (let index = 0; index <= 26; index += 1) {
 }
 
 // date
-let buttonSbmt = document.querySelector('#submit')
-let inputDate = document.querySelector('#data-inicio');
-// let dia =  inputDate.value.split('/');
-// let month = inputDate.value.split('/');
-// let year = inputDate.value.split('/');
-let inputDateDay = document.querySelector('#date-day');
-let inputDateMonth = document.querySelector('#date-month');
-let inputDateYear = document.querySelector('#date-year');
-function verificatioData () {
-  if (Number(inputDateDay.value) < 0 || Number(inputDateDay.value) > 31) {
-    alert('insira um dia Valído!')
-  } else if (Number(inputDateMonth.value) < 0 || Number(inputDateMonth.value) > 12) {
-    alert('Insira um Mês Valído')
-  } else if (Number(inputDateYear.value) < 0) {
-    alert('insira um Ano Valído')
+let buttonSubmit = document.querySelector('#submit');
+function validateDate() {
+  let inputDate = document.querySelector('#date-user');
+  if (Number(inputDate.value.split('/')[0]) < 0 || Number(inputDate.value.split('/')[0]) > 31) {
+    alert("Dia Inválido");
+  } else if (Number(inputDate.value.split('/')[1]) < 0 || Number(inputDate.value.split('/')[1]) > 12) {
+    alert('Mês Inválido');
+  } else if (Number(inputDate.value.split('/')[2]) < 0) {
+    alert('Ano Inválido');
   }
 }
-
-buttonSbmt.addEventListener('click', verificatioData);
+buttonSubmit.addEventListener('click', validateDate);
 
 // Capturar Botão
-let buttonSubmit = document.querySelector('#submit');
 // Criar Função
 function preventButton (event) {
   event.preventDefault();
