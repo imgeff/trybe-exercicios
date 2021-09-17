@@ -11,6 +11,10 @@ for (let index = 0; index <= 26; index += 1) {
 
 // date
 let buttonSbmt = document.querySelector('#submit')
+let inputDate = document.querySelector('#data-inicio');
+// let dia =  inputDate.value.split('/');
+// let month = inputDate.value.split('/');
+// let year = inputDate.value.split('/');
 let inputDateDay = document.querySelector('#date-day');
 let inputDateMonth = document.querySelector('#date-month');
 let inputDateYear = document.querySelector('#date-year');
@@ -25,3 +29,16 @@ function verificatioData () {
 }
 
 buttonSbmt.addEventListener('click', verificatioData);
+
+// Capturar Botão
+let buttonSubmit = document.querySelector('#submit');
+// Criar Função
+function preventButton (event) {
+  event.preventDefault();
+  if (document.querySelector('#name-complete').value.length > 40 || document.querySelector('#name-complete').value.length < 1) {
+    alert('Insira entre 1 e 40 caracteres');
+  }
+}
+
+buttonSubmit.addEventListener('click', preventButton)
+// Validação manual
