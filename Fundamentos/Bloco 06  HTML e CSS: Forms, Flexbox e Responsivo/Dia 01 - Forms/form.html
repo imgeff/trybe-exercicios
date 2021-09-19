@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios Dia 01</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="form-header">
+    <h1>Formulário para cadastro de currículo</h1>
+    <p>Preencha os campos abaixo.</p>
+  </header>
+  <main>
+    <div id="recebe-div">
+      
+    </div>
+    <form>
+      <fieldset>
+        <label for="name-complete">Nome Completo</label>
+        <input type="text" name="name" id="name-complete" maxlength="40" required placeholder="Digite seu Nome">
+        <br>        
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email-user" maxlength="50" required placeholder="Digite seu email">
+        <br>
+        <label for="cpf-number">CPF</label>
+        <input type="text" name="cpf" id="cpf-number" maxlength="11" required placeholder="Digite seu CPF">
+        <br>
+        <label for="endereco-user">Endereço</label>
+        <input type="text" name="endereco" id="endereco-user" maxlength="200" required placeholder="Digite o seu Endereço">
+        <br>
+        <label for="city-user">Cidade</label>
+        <input type="text" name="city" id="city-user" maxlength="28" required placeholder="Digite sua Cidade">
+        <br>
+        <label for="estado-user">Estado</label>
+        <select name="estado" id="estado-user">
+        <!-- script -->
+        </select>
+        <br>
+        <label for="">Moradia: </label>
+        <label for="home">Casa</label>
+        <input type="radio" name="moradia" id="home" required>
+        <label for="appartment">Apartamento</label>
+        <input type="radio" name="moradia" id="appartment" required>
+      </fieldset>
+      <fieldset>
+        <label for="resume-user">Resumo do Currículo</label>
+        <textarea required name="resume" id="resume-user" cols="30" rows="10" maxlength="1000" placeholder="Faça um resumo do Currículo"></textarea>
+        <br>
+        <label for="cargo-user">Cargo</label>
+        <input type="text" name="cargo" id="cargo-user" required maxlength="40" placeholder="Digite seu Cargo">
+        <br>
+        <label for="description-cargo">Descrição do Cargo</label>
+        <input type="text" name="description" id="description-cargo" maxlength="500" required placeholder="Descreva seu Cargo">
+        <br>
+        <div id="date-start">
+          <label for="date-user">Data de Início: </label>
+          <input type="text" name="date" id="date-user" required placeholder="dd/mm/yyyy">
+        </div>
+      </fieldset>
+      <button type="submit" id="submit">Enviar</button>
+      <button type="reset">Limpar todos os dados</button>
+    </form>
+  </main>
+</body>
+</html>
