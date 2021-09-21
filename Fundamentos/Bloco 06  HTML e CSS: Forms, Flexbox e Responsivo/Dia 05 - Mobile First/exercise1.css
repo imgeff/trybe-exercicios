@@ -6,7 +6,7 @@ h1 {
     font-size: xx-large;
 }
 h2 {
-
+    margin: 15px;
 }
 
 img {
@@ -27,7 +27,16 @@ figure {
         display: flex;
         flex-wrap: wrap;
     }
+
+    h1 {
+        margin: 15px;
+    }
     
+    p {
+        max-width: 70%;
+        margin: 15px;
+    }
+
     main {
         display: flex;
         flex-direction: row;
