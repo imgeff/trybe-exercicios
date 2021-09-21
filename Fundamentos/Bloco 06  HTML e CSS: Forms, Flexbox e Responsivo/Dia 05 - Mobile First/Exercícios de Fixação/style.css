@@ -80,3 +80,9 @@ p strong {
     display: flex;
   }
 }
+
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  #three-div {
+    display: none;
+  }
+}
