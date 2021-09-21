@@ -19,6 +19,32 @@ figure {
     margin: 0;
 }
 
-@media  (min-width: 800px) {
+@media  (min-width: 300px) {
+    body {
+        background-color: darksalmon;
+        font-size: initial;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
     
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    img {
+        max-width: 50%;
+    }
+
+    .col-01 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-02 {
+        display: flex;
+        flex-direction: column;
+    }
 }
