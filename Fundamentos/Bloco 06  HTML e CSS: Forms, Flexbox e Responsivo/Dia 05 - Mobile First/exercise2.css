@@ -4,3 +4,19 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+header {
+  display: flex;
+  background-color: deepskyblue;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 15px;
+}
