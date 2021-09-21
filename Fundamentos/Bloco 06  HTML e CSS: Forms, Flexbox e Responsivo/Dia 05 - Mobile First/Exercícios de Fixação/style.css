@@ -70,4 +70,13 @@ p strong {
   .card {
     display: flex;
   }
+  #second-div {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  #second-div {
+    display: flex;
+  }
 }
