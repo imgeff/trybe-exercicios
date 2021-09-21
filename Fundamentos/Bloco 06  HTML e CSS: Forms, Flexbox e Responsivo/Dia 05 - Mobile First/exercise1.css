@@ -1,6 +1,6 @@
 body {
     font-size: 1.2em;
-    margin: 15px;
+    margin: 20px;
 }
 h1 {
     font-size: xx-large;
@@ -11,10 +11,14 @@ h2 {
 
 img {
     max-width: 100%;
-    margin: 30px;
+    margin: 20px;
 
 }
 
 figure {
     margin: 0;
+}
+
+@media  (min-width: 800px) {
+    
 }
