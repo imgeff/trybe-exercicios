@@ -7,11 +7,12 @@ html {
 }
 
 header {
+  align-items: center;
   font-size: x-large;
   font-weight: 700;
   display: flex;
   background-color: deepskyblue;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 15px 30px;
 }
 
@@ -38,7 +39,7 @@ article {
   align-items: center;
 }
 
-p, h1{
+.main-content p {
   max-width: 70%;
 }
 
@@ -78,11 +79,79 @@ footer div {
 }
 
 @media screen and (min-width: 1300px) {
+  .aside-one, .aside-two {
+    padding-top: 10px;
+  }
+
+  .aside-two {
+    height: 2357px;
+  }
+
   footer {
-    padding-left: 50%;
+    padding: 3% 10%;
+  }
+
+  footer div {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  p,li {
+    font-size: large;
   }
 }
 
-/* @media  and (min-width:) {
-  
-} */
+@media screen  and (min-width: 601px) and (max-width: 1300px){
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li,p {
+    font-size: large;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  article h1 {
+    font-size: x-large;
+  }
+
+  header {
+    font-size: large;
+  }
+
+  footer {
+    padding: 3% 10%;
+  }
+
+  footer div {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  footer div p {
+    width: 100%;
+  }
+
+  .container-asides {
+    display: flex;
+    width: 100%;
+  }
+
+  .aside-one, .aside-two {
+    width: 50%;
+  }
+
+  .aside-two ul {
+    text-align: center;
+  }
+}
