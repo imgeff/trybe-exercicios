@@ -1,11 +1,14 @@
 html {
   box-sizing: border-box;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 header {
+  font-size: x-large;
+  font-weight: 700;
   display: flex;
   background-color: deepskyblue;
   justify-content: space-between;
@@ -20,3 +23,66 @@ header nav ul {
 header nav ul li {
   margin-left: 15px;
 }
+
+.container {
+  display: flex;
+}
+
+article {
+  background-color: rgb(160, 226, 251);
+  border-radius: 10px;
+  width: 70%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p, h1{
+  max-width: 70%;
+}
+
+.aside-one,.aside-two {
+  border-radius: 10px;
+  background-color: rgb(160, 226, 251);
+  margin-right: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+.aside-one,.aside-two h2 {
+  text-align: center;
+}
+
+.aside-one ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.aside-two ul {
+  list-style: none;
+  padding: 20px;
+}
+
+footer {
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: rgb(160, 226, 251);
+  display: flex;
+  justify-content: center;
+  padding-left: 43%;
+}
+
+footer div {
+  flex-direction: row;
+}
+
+@media screen and (min-width: 1300px) {
+  footer {
+    padding-left: 50%;
+  }
+}
+
+/* @media  and (min-width:) {
+  
+} */
