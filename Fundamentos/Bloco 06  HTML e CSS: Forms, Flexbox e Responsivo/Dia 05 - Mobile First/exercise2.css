@@ -155,3 +155,38 @@ footer div {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+  }
+
+  header ul {
+    padding-left: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aside-one, .aside-two {
+    padding-top: 20px;
+  }
+
+  .aside-two {
+    text-align: center;
+  }
+
+  .main-content {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  footer {
+    padding-left: 0;
+    text-align: center;
+  }
+
+}
