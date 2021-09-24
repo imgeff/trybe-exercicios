@@ -40,3 +40,8 @@ const biggerWord = (frase) => {
   return bigWord
 }
 biggerWord("Antônio foi no banheiro e não sabemos o que aconteceu")
+
+const buttonClick = document.querySelector('button');
+const campCount = document.querySelector('strong');
+let clickCount = 0;
+buttonClick.addEventListener('click', () => campCount.innerText = clickCount += 1)
