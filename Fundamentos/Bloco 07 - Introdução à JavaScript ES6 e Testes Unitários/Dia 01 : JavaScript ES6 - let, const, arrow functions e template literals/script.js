@@ -45,3 +45,13 @@ const buttonClick = document.querySelector('button');
 const campCount = document.querySelector('strong');
 let clickCount = 0;
 buttonClick.addEventListener('click', () => campCount.innerText = clickCount += 1)
+
+const subsWord = (string) => {
+  const stringDefault = "Tryber x aqui!".split(' ');
+  for (let index = 0; index < stringDefault.length; index += 1) {
+    (stringDefault[index] === 'x') ? stringDefault[index] = string : stringDefault[index];
+  }
+  return stringDefault.join()
+}
+
+subsWord("Bebeto");
