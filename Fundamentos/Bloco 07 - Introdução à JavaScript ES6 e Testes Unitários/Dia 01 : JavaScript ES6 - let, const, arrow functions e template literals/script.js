@@ -19,3 +19,13 @@ const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 // Seu código aqui.
 oddsAndEvens.sort((a, b) => a - b)
 console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`); // será necessário alterar essa linha 😉
+// Parte 2
+
+const factorialNUmber = (n) => {
+  let factor = 1;
+  for (let index = n; index > 0; index -= 1) {
+    (index > 0) ? factor = factor * index : factor;
+  }
+  console.log(factor);
+}
+factorialNUmber(4)
