@@ -29,3 +29,14 @@ const factorialNUmber = (n) => {
   console.log(factor);
 }
 factorialNUmber(4)
+
+const biggerWord = (frase) => {
+  let bigWord = '0';
+  const arrayWord = frase.split(' ');
+  for (let index = 0; index < arrayWord.length; index += 1) {
+    const word = arrayWord[index];
+    (word.length >= bigWord.length) ? bigWord = word : bigWord = bigWord;
+  }
+  return bigWord
+}
+biggerWord("Antônio foi no banheiro e não sabemos o que aconteceu")
