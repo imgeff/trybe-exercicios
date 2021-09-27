@@ -54,4 +54,10 @@ const subsWord = (string) => {
   return stringDefault.join()
 }
 
-subsWord("Bebeto");
+const concatStrings = (function1) => {
+ console.log(`${function1} Minhas habilidades de Programação são:
+ - HTML
+ - JavaScript
+ - CSS ... `);
+}
+concatStrings(subsWord("Bebeto"));
