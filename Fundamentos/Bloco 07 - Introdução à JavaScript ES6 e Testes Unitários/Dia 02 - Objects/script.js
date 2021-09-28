@@ -82,3 +82,10 @@ const lsKeys = (object) => {
  return Object.keys(object);
 }
 console.log(lsKeys(lesson3));
+
+const lengthObject  = (object) => {
+ const arrayObject = Object.entries(object);
+ return arrayObject.length;
+}
+
+console.log(lengthObject(lesson1));
