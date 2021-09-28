@@ -87,5 +87,9 @@ const lengthObject  = (object) => {
  const arrayObject = Object.entries(object);
  return arrayObject.length;
 }
-
 console.log(lengthObject(lesson1));
+
+const lsValues = (object) => {
+  return Object.values(object);
+ }
+ console.log(lsValues(lesson3));
