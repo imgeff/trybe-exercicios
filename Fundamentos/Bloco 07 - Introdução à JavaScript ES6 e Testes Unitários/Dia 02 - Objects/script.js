@@ -71,3 +71,14 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
+function turnNight (object, key, value ) {
+  object[key] = value
+}
+turnNight(lesson2, 'turno', 'noite')
+console.log(lesson2);
+
+const lsKeys = (object) => {
+ return Object.keys(object);
+}
+console.log(lsKeys(lesson3));
