@@ -33,3 +33,25 @@ const checkNumber = (number) => {
 const loteria = (aposta, check) => check(aposta);
 
 console.log(loteria(2, checkNumber));
+// Exercpício 3
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const pontuation = (gabarite, answers, check) => {
+  return check(gabarite, answers);
+}
+
+const result = (RIGHT_ANSWERS, STUDENT_ANSWERS) => {
+  let nota = 0;
+  for (let index = 0; index < RIGHT_ANSWERS.length; index += 1) {
+    if (RIGHT_ANSWERS[index] === STUDENT_ANSWERS[index]) {
+      nota += 1;
+    } else if (STUDENT_ANSWERS[index] === 'N.A') {
+      nota = nota;
+    } else if (RIGHT_ANSWERS[index] !== STUDENT_ANSWERS[index]) {
+      nota -= 0.5;
+    }
+  }
+  return nota;
+}
+console.log(pontuation(RIGHT_ANSWERS, STUDENT_ANSWERS, result));
