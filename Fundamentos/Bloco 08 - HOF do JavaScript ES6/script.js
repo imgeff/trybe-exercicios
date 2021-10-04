@@ -1,3 +1,4 @@
+// Exercício 1
 const cadastro = (nome) => {
   return {
     nome: nome,
@@ -15,3 +16,20 @@ const newEmployees = (func) => {
 };
 
 console.log(newEmployees(cadastro))
+// Exercício 2
+const numberGenerator = () => {
+  return Math.round(Math.random() * 5);
+}
+const checkNumber = (number) => {
+  let result;
+  if (number === numberGenerator()) {
+    result = "Parabéns você ganhou";
+  } else {
+    result = "Tente novamente";
+  }
+  return result;
+}
+
+const loteria = (aposta, check) => check(aposta);
+
+console.log(loteria(2, checkNumber));
