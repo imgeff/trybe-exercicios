@@ -101,4 +101,4 @@ function nameAndAge() {
  return ageOfAuthor.sort((a, b) => a.age - b.age)
 }
 
-console.log(nameAndAge())
+console.table(nameAndAge())
