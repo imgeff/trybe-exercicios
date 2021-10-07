@@ -62,3 +62,23 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
+
+const expectedResult = {
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  genre: 'Fantasia',
+  author: {
+    name: 'George R. R. Martin',
+    birthYear: 1948,
+  },
+  releaseYear: 1991,
+};
+
+function longestNamedBook() {
+  // Encontre o livro com o maior nome.
+  const foundHighNameBook = books
+  .reduce((last, actual) => (last.name.length > actual.name.length? last: actual))
+  return foundHighNameBook;
+}
+
+console.log(longestNamedBook())
