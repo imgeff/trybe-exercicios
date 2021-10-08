@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 const books = [
   {
     id: 1,
@@ -65,14 +63,35 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const expectedResult = false;
-// Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
-function authorUnique() {
-return books.every((book) => {
-  !books.some((booksSome) => {
-    booksSome.author.birthYear === book.author.birthYear && booksSome.author.name !== book.author.name
-  })
-})
+const expectedResult = [
+  {
+    id: 6,
+    name: 'O Chamado de Cthulhu',
+    genre: 'Terror',
+    author: { name: 'H. P. Lovecraft', birthYear: 1890 },
+    releaseYear: 1928,
+  },
+  {
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: { name: 'Isaac Asimov', birthYear: 1920 },
+    releaseYear: 1951,
+  },
+  {
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+    releaseYear: 1954,
+  },
+];
+
+function oldBooksOrdered() {
+  // escreva seu código aqui
+  const booksOld60 = books.filter((book) => 2021 - book.releaseYear > 60)
+
+  return booksOld60.sort((a, b) => a.releaseYear - b.releaseYear)
 }
 
-assert.strictEqual(authorUnique(), expectedResult);
+console.log(oldBooksOrdered())

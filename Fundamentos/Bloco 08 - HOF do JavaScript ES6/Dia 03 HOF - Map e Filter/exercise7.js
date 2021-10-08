@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 const books = [
   {
     id: 1,
@@ -65,14 +63,12 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const expectedResult = false;
-// Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
-function authorUnique() {
-return books.every((book) => {
-  !books.some((booksSome) => {
-    booksSome.author.birthYear === book.author.birthYear && booksSome.author.name !== book.author.name
-  })
-})
+const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  return books.find((book) => (
+    book.author.name.split(' ').filter((word) => word.endsWith('.')).length === 3
+  )).name;
 }
 
-assert.strictEqual(authorUnique(), expectedResult);
+console.log (authorWith3DotsOnName())
