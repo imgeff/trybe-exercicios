@@ -1,0 +1,13 @@
+form {
+  display: flex;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label{
+  margin: 5px;
+}
