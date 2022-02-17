@@ -1,6 +1,18 @@
-version: '3'
-services:
-  ghost-page:
-    image: ghost:1-alpine
-    ports:
-      - 2368:2368
+  version: '3'
+  services:
+    ghost-page:
+      image: ghost:1-alpine
+      ports:
+        - 2368:2368
+      environment:
+        - database__client=mysql
+        - database__connection__host=dbsql
+        - database__connection__user=root
+        - database__connection__password=abc1234
+        - database__connection__database=ghost-page
+      depends_on:
+        - dbsql
+    dbsql:
+      image: mysql:5.7
+      environment:
+        - MYSQL_ROOT_PASSWORD=abc1234
