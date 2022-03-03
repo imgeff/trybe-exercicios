@@ -1,6 +1,7 @@
 -- Exercício 1
 SELECT MAX(SALARY) FROM hr.employees;
 -- Exercício 2
+SELECT MAX(SALARY) - MIN(SALARY) FROM hr.employees;
 -- Exercício 3
 -- Exercício 4
 -- Exercício 5
