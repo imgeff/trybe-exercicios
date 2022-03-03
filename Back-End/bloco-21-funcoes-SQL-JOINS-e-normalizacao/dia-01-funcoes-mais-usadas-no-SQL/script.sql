@@ -3,6 +3,8 @@ SELECT MAX(SALARY) FROM hr.employees;
 -- Exercício 2
 SELECT MAX(SALARY) - MIN(SALARY) FROM hr.employees;
 -- Exercício 3
+SELECT JOB_ID, AVG(SALARY) AS MEDIA_SALARIAL FROM hr.employees
+GROUP BY JOB_ID ORDER BY MEDIA_SALARIAL DESC;
 -- Exercício 4
 -- Exercício 5
 -- Exercício 6
