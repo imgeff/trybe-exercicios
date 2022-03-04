@@ -17,6 +17,7 @@ ROUND(AVG(SALARY), 2) AS MEDIA_SALARIAL FROM hr.employees;
 SELECT COUNT(JOB_ID) FROM hr.employees
 WHERE JOB_ID = 'IT_PROG';
 -- Exercício 7
+SELECT  JOB_ID, SUM(SALARY) FROM hr.employees GROUP BY JOB_ID;
 -- Exercício 8
 -- Exercício 9
 -- Exercício 10
