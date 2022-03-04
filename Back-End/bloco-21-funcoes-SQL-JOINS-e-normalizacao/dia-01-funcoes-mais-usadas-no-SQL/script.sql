@@ -45,6 +45,7 @@ SELECT EMPLOYEE_ID, FIRST_NAME, DAY(HIRE_DATE) FROM hr.employees;
 -- Exercício 15
 SELECT EMPLOYEE_ID, FIRST_NAME, MONTH(HIRE_DATE) FROM hr.employees;
 -- Exercício 16
+SELECT UCASE(FIRST_NAME), UCASE(LAST_NAME) FROM hr.employees;
 -- Exercício 17
 -- Exercício 18
 
