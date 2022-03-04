@@ -14,6 +14,8 @@ MIN(SALARY) AS MENOR_SALARIO,
 SUM(SALARY) AS SUM_SALARY, 
 ROUND(AVG(SALARY), 2) AS MEDIA_SALARIAL FROM hr.employees;
 -- Exercício 6
+SELECT COUNT(JOB_ID) FROM hr.employees
+WHERE JOB_ID = 'IT_PROG';
 -- Exercício 7
 -- Exercício 8
 -- Exercício 9
