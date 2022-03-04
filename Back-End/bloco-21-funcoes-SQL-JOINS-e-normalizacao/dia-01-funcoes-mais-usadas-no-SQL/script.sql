@@ -41,6 +41,7 @@ WHERE CHAR_LENGTH(FIRST_NAME) >= 8;
 -- Exercício 13
 SELECT EMPLOYEE_ID, FIRST_NAME, YEAR(HIRE_DATE) FROM hr.employees;
 -- Exercício 14
+SELECT EMPLOYEE_ID, FIRST_NAME, DAY(HIRE_DATE) FROM hr.employees;
 -- Exercício 15
 -- Exercício 16
 -- Exercício 17
