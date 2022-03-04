@@ -36,6 +36,8 @@ UPDATE hr.employees
 SET PHONE_NUMBER = REPLACE(PHONE_NUMBER, '515', '777')
 WHERE PHONE_NUMBER LIKE('515%');
 -- Exercício 12
+SELECT * FROM hr.employees
+WHERE CHAR_LENGTH(FIRST_NAME) >= 8;
 -- Exercício 13
 -- Exercício 14
 -- Exercício 15
