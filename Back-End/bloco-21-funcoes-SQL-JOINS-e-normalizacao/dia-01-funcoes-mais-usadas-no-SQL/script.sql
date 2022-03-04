@@ -43,6 +43,7 @@ SELECT EMPLOYEE_ID, FIRST_NAME, YEAR(HIRE_DATE) FROM hr.employees;
 -- Exercício 14
 SELECT EMPLOYEE_ID, FIRST_NAME, DAY(HIRE_DATE) FROM hr.employees;
 -- Exercício 15
+SELECT EMPLOYEE_ID, FIRST_NAME, MONTH(HIRE_DATE) FROM hr.employees;
 -- Exercício 16
 -- Exercício 17
 -- Exercício 18
