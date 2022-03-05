@@ -41,3 +41,12 @@ INNER JOIN sakila.payment p
 ON s.staff_id = p.staff_id
 WHERE YEAR(p.payment_date) = 2006
 GROUP BY s.first_name, s.last_name;
+-- QUERY 7
+SELECT 
+CONCAT(a.first_name, ' ', a.last_name) AS `name`,
+a.actor_id, fa.film_id, f.title
+FROM sakila.actor a
+INNER JOIN sakila.film_actor fa
+ON a.actor_id = fa.actor_id
+INNER JOIN sakila.film f
+ON fa.film_id = f.film_id;
