@@ -15,3 +15,9 @@ FROM Pixar.Movies m
 INNER JOIN Pixar.BoxOffice BO
 ON m.id = BO.movie_id
 ORDER BY m.title DESC;
+-- QUERY 4
+SELECT t.*, m.*
+FROM Pixar.Theater t
+LEFT JOIN Pixar.Movies m
+ON t.id = m.theater_id
+ORDER BY t.name;
