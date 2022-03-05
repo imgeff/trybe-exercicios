@@ -9,3 +9,9 @@ FROM Pixar.Movies m
 INNER JOIN Pixar.BoxOffice BO
 ON m.id = BO.movie_id
 WHERE BO.international_sales > BO.domestic_sales;
+-- QUERY 3
+SELECT m.title, BO.rating 
+FROM Pixar.Movies m
+INNER JOIN Pixar.BoxOffice BO
+ON m.id = BO.movie_id
+ORDER BY m.title DESC;
