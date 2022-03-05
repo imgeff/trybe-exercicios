@@ -15,7 +15,3 @@ INNER JOIN sakila.address adr
 ON c.address_id = adr.address_id
 ORDER BY c.first_name DESC
 LIMIT 100;
--- QUERY 4
--- QUERY 5
--- QUERY 6
--- QUERY 7
