@@ -33,3 +33,11 @@ ON c.address_id = a.address_id
 WHERE c.active = 1
 GROUP BY `name`
 ORDER BY `name` DESC;
+-- QUERY 6
+SELECT
+s.first_name,  s.last_name, AVG(p.amount) AS media_payment
+FROM sakila.staff s
+INNER JOIN sakila.payment p
+ON s.staff_id = p.staff_id
+WHERE YEAR(p.payment_date) = 2006
+GROUP BY s.first_name, s.last_name;
