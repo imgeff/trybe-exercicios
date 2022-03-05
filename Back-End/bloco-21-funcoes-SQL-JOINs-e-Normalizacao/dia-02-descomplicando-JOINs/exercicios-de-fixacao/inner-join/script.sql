@@ -15,3 +15,11 @@ INNER JOIN sakila.address adr
 ON c.address_id = adr.address_id
 ORDER BY c.first_name DESC
 LIMIT 100;
+-- QUERY 4
+SELECT 
+CONCAT(C.first_name, ' ', C.last_name) AS `name`,
+C.email, C.address_id, A.address, A.district
+FROM sakila.customer C
+INNER JOIN sakila.address A
+ON C.address_id = A.address_id
+HAVING A.district = 'California' AND LCASE(`name`) LIKE('%rene%');
