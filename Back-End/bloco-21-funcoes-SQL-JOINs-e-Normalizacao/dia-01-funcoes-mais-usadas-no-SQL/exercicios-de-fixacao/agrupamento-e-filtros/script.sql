@@ -25,3 +25,11 @@ COUNT(*) AS quantity_address
 FROM sakila.address
 GROUP BY district
 ORDER BY quantity_address DESC;
+-- QUERY 5
+SELECT
+rating,
+AVG(length) AS 'Durações médias'
+FROM sakila.film
+GROUP BY rating
+HAVING AVG(length) BETWEEN 115.0 AND 121.50
+ORDER BY AVG(length) DESC;
