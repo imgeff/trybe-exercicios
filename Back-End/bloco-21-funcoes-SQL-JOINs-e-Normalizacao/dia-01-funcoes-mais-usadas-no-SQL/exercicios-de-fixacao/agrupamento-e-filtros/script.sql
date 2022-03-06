@@ -18,3 +18,10 @@ AVG(rental_duration) AS 'média de duração de locação'
 FROM sakila.film
 GROUP BY rating
 ORDER BY AVG(rental_duration) DESC;
+-- QUERY 4
+SELECT 
+district,
+COUNT(*) AS quantity_address
+FROM sakila.address
+GROUP BY district
+ORDER BY quantity_address DESC;
