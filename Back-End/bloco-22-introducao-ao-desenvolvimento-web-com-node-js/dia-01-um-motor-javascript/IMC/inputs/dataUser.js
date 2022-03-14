@@ -7,6 +7,7 @@ const data = {
 }
 
 const questionsUser = () => {
+  console.log('IMC')
   data.name = question('Qual é o seu nome? ');
   data.weight = questionFloat('Qual é o seu peso? ');
   data.height = questionFloat('Qual é a sua altura? ');

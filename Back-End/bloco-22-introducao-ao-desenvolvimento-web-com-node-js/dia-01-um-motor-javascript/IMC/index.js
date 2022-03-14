@@ -1,8 +1,10 @@
 const userIMC = require('./services/userIMC');
 
 
-const main = () => {
+const IMC = () => {
   userIMC();
 }
 
-main();
+IMC();
+
+module.exports = IMC;

@@ -1,7 +1,10 @@
 const userVm =  require('./app/userVM');
 
-const main = () => {
+const VM = () => {
+  console.log('Calcular velocidade média')
   userVm();
 }
 
-main();
+VM();
+
+module.exports = VM;

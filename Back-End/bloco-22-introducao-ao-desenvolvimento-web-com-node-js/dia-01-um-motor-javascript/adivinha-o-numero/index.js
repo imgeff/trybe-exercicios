@@ -1,10 +1,13 @@
 const { dataUser } = require('./inputs/userInput');
 const whatIsNumber = require('./app/whatIsNumber');
 
-const main = () => {
+const adivinhaONumero = () => {
+  console.log('Jogo de adivinhação');
   do {
     whatIsNumber()
   } while (dataUser.playAgain === true);
 }
 
-main();
+adivinhaONumero();
+
+module.exports = adivinhaONumero;
