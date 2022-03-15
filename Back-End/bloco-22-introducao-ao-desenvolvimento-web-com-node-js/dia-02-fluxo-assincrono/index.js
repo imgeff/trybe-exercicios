@@ -9,3 +9,17 @@ const calcThreeValues = (value1, value2, value3) => {
     }
   })
 }
+
+const randomNumberUpToHundred = () => Math.floor(Math.random() * 100 + 1);
+
+const value1 = randomNumberUpToHundred();
+const value2 = randomNumberUpToHundred();
+const value3 = randomNumberUpToHundred();
+
+async function main() {
+  calcThreeValues(value1, value2, value3)
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
+}
+
+main();
