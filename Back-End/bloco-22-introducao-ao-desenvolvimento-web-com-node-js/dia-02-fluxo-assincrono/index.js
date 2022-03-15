@@ -17,9 +17,12 @@ const value2 = randomNumberUpToHundred();
 const value3 = randomNumberUpToHundred();
 
 async function main() {
-  calcThreeValues(value1, value2, value3)
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error));
+  try {
+    const result = await calcThreeValues(value1, value2, value3);
+    console.log(result);
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 main();
