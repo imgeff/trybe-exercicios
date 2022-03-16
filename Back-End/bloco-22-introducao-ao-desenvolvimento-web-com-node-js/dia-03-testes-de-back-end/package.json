@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "chai": "^4.3.6",
-    "mocha": "^9.2.2"
+    "mocha": "^9.2.2",
+    "sinon": "^13.0.1"
   },
   "name": "dia-03-testes-de-back-end",
   "version": "1.0.0",
@@ -40,8 +41,8 @@
     "find-up": "^5.0.0",
     "flat": "^5.0.2",
     "fs.realpath": "^1.0.0",
-    "get-func-name": "^2.0.0",
     "get-caller-file": "^2.0.5",
+    "get-func-name": "^2.0.0",
     "glob": "^7.2.0",
     "glob-parent": "^5.1.2",
     "growl": "^1.10.5",
@@ -53,8 +54,8 @@
     "is-extglob": "^2.1.1",
     "is-fullwidth-code-point": "^3.0.0",
     "is-glob": "^4.0.3",
-    "is-plain-obj": "^2.1.0",
     "is-number": "^7.0.0",
+    "is-plain-obj": "^2.1.0",
     "is-unicode-supported": "^0.1.0",
     "isexe": "^2.0.0",
     "js-yaml": "^4.1.0",

@@ -1,5 +1,7 @@
 const { expect } = require('chai');
 const { sortingNumber, writeInFile } = require('../index');
+const sinon = require('sinon');
+const fs = require('fs');
 
 describe('Testa o funcionamento da função sortingNumber', () => {
   it('Verifica se existe a função sortingNumber', () => {
@@ -27,6 +29,13 @@ describe('Testa função que escreve em arquivos', () => {
   it('Verifica se função existe', () => {
     expect(writeInFile).to.be.a('function');
   })
+
+  before(() => {
+    sinon.stub(fs, 'writeFileSync').returns('ok');
+  });
+
+  after(() => fs.writeFileSync.restore());
+
   it('Verifica se a função retorna a string "ok"', () => {
     const result = writeInFile('file.txt', 'texto do arquivo');
     expect(result).to.be.a('string');
