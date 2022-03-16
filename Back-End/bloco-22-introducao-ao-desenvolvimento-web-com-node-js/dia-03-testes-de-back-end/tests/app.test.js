@@ -17,4 +17,8 @@ describe('Testa o funcionamento da função sortingNumber', () => {
     const result = sortingNumber(-7);
     expect(result).to.be.equal('negativo');
   })
+  it('retorna a string "o valor deve ser um número" quando for passado um valor que não seja do type number', () => {
+    const result = sortingNumber('7');
+    expect(result).to.be.equal('o valor deve ser um número');
+  })
 })
