@@ -9,4 +9,8 @@ describe('Testa o funcionamento da função sortingNumber', () => {
     const result = sortingNumber(7);
     expect(result).to.be.equal('positivo');
   })
+  it('retorna a string "neutro" para numero igual a 0', () => {
+    const result = sortingNumber(0);
+    expect(result).to.be.equal('neutro');
+  })
 })
