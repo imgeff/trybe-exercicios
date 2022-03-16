@@ -13,4 +13,8 @@ describe('Testa o funcionamento da função sortingNumber', () => {
     const result = sortingNumber(0);
     expect(result).to.be.equal('neutro');
   })
+  it('retorna a string "negativo" para numero menor que 0', () => {
+    const result = sortingNumber(-7);
+    expect(result).to.be.equal('negativo');
+  })
 })
