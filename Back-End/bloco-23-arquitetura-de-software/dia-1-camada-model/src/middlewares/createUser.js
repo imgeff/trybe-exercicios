@@ -8,9 +8,9 @@ const messageError = (messageField) => {
   return message;
 }
 
-const createUser = (req, res) => {
+const createUser = async (req, res) => {
   const { first_name: firstName, last_name: lastName, email, password } = req.body;
-  const newUser = create(firstName, lastName, email, password);
+  const newUser = await create(firstName, lastName, email, password);
   if (firstName === undefined) return res.status(400).json(messageError('não pode ser vazio'));
   if (lastName === undefined) return res.status(400).json(messageError('não pode ser vazio'));
   if (email === undefined) return res.status(400).json(messageError('não pode ser vazio'));
