@@ -1,4 +1,4 @@
-const create = require('../model/user');
+const { create } = require('../model/user');
 
 const messageError = (messageField) => {
   const message = {
