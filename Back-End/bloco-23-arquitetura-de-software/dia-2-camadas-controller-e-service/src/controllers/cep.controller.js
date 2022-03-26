@@ -1,6 +1,6 @@
-const { getCepService } = require('../services/cep.service');
+const { getCepService, createCEPService } = require('../services/cep.service');
 
-const getCepController = async (req, res) => {
+const getCEP = async (req, res) => {
   const { cep } = req.params;
   const invalidCep = { error: { code: 'invalidData', message: 'CEP inválido' }};
   const cepNotFound = { error: { code: 'notFound', message: 'CEP não encontrado'}};
@@ -10,6 +10,14 @@ const getCepController = async (req, res) => {
   return res.status(200).json(cepReturn);
 }
 
+const createCEP = async (req, res) => {
+  const { cep, logradouro, bairro, localidade, uf } = req.body;
+  const result = await createCEPService(cep, logradouro, bairro, localidade, uf);
+  if (result === 409) return res.status(result).json({ error: { code: "alreadyExists", message: "CEP já existente" }});
+  return res.status(201).json(result);
+}
+
 module.exports = {
-  getCepController,
+  getCEP,
+  createCEP,
 }
