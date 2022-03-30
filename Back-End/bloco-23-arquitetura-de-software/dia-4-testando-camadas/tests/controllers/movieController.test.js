@@ -77,3 +77,56 @@ describe('Ao chamar o controller de create', () => {
 
   });
 });
+
+describe('Ao chamar o controller de getById', () => {
+  const payloadMovie = {
+    id: 1,
+    title: 'Example Movie',
+    directedBy: 'Jane Dow',
+    releaseYear: 1999,
+  };
+  const response = {};
+  const request = {};
+
+  describe('Quando O filme é encontrado', () => {
+    before(() => {
+      request.params = { id: 1 };
+      response.status = sinon.stub()
+        .returns(response);
+      response.json = sinon.stub()
+        .returns();
+      sinon.stub(MoviesService, 'getById').resolves(payloadMovie);
+    })
+
+    after(() => {
+      MoviesService.getById.restore();
+    })
+
+    it('Retorna status 200 e o filme encontrado', async () => {
+      await MoviesController.getById(request, response);
+      expect(response.status.calledWith(200)).to.be.equal(true);
+      expect(response.json.calledWith(payloadMovie)).to.be.equal(true);
+    })
+  })
+
+  describe('Quando o filme não é encontrado', () => {
+    before(() => {
+      request.params = { id: 2 };
+      response.status = sinon.stub()
+        .returns(response);
+      response.json = sinon.stub()
+        .returns();
+      sinon.stub(MoviesService, 'getById').resolves("Filme não encontrado.");
+    })
+
+    after(() => {
+      MoviesService.getById.restore();
+    })
+
+    it('Retorna status 404 com a mensagem "Filme não encontrado."', async () => {
+      await MoviesController.getById(request, response);
+      expect(response.status.calledWith(404)).to.be.equal(true);
+      expect(response.json.calledWith("Filme não encontrado.")).to.be.equal(true);
+    })
+  })
+})
