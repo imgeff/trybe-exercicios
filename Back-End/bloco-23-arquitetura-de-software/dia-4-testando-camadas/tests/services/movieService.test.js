@@ -5,7 +5,7 @@ const connection = require('../../models/connection');
 const MoviesModel = require('../../models/movieModel');
 const MoviesService = require('../../services/movieService');
 
-describe('Insere um novo filme no BD', () => {
+describe('Testa camada MoviesService', () => {
   describe('quando o payload informado não é válido', async () => {
     const payloadMovie = {};
 
@@ -54,4 +54,45 @@ describe('Insere um novo filme no BD', () => {
     });
 
   });
+
+  describe('Testa MoviesServices.getById', () => {
+    const payloadMovie = {
+      id: 1,
+      title: 'Example Movie',
+      directedBy: 'Jane Dow',
+      releaseYear: 1999,
+    };
+
+    describe('Quando o filme é encontrado', () => {
+      before(() => {
+        sinon.stub(MoviesModel, 'getById').resolves(payloadMovie)
+      })
+  
+      after(() => {
+        MoviesModel.getById.restore();
+      })
+  
+      it('Retorna informações do filme', async () => {
+        const result = await MoviesService.getById(1);
+        expect(result.id).to.be.equal(1);
+        expect(result).to.be.equal(payloadMovie);
+      })
+    })
+
+    describe('Quando o filme não é encontrado', () => {
+      before(() => {
+        sinon.stub(MoviesModel, 'getById').resolves({})
+      })
+  
+      after(() => {
+        MoviesModel.getById.restore();
+      })
+
+      it('Retorna  "Filme não encontrado."', async () => {
+        const resultService = await MoviesService.getById(2);
+        expect(resultService).to.be.a('string');
+        expect(resultService).to.be.equal("Filme não encontrado.");
+      })
+    })
+  })
 });
