@@ -154,7 +154,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 21-1: _Funções mais usadas no SQL_
 - [X] 21-2: _Descomplicando JOINs e UNIONs_
-- [X] 21-3: _Stored Routines & Subqueries_
+- [ ] 21-3: _Stored Routines & Subqueries_
 - [ ] 21-4: _[Projeto - Vocabulary Booster]()_
 
 ##### Bloco 22: Bancos de dados relacionais
@@ -200,7 +200,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 28-1: _Arquitetura de Software - Camada de Serviço_
 - [X] 28-2: _Arquitetura web - Rest e Restful_
-- [ ] 28-3: _[Projeto - Store Manager]()_
+- [X] 28-3: _[Projeto - Store Manager]()_
 
 ##### Bloco 29: NodeJS
 
