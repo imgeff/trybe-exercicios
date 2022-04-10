@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAll, getById, create } = require('./controllers/bookController');
+const { getAll, getById, create, update } = require('./controllers/bookController');
 require('dotenv').config();
 
 const app = express();
@@ -10,7 +10,9 @@ app.get('/books', getAll);
 
 app.get('/books/:id', getById);
 
-app.post('/book', create)
+app.post('/book', create);
+
+app.post('/book/:id', update);
 
 const PORT = process.env.PORT;
 
