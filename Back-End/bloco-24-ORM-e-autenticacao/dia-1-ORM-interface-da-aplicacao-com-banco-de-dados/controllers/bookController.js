@@ -22,7 +22,19 @@ const getById = async (req, res) => {
   }
 }
 
+const create = async (req, res) => {
+  try {
+    const { title, author, pageQuantity } = req.body;
+    const newBook = await Books.create({ title, author, pageQuantity });
+    return res.status(200).json(newBook);
+  } catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ message: 'Algo deu errado'});
+  }
+}
+
 module.exports = {
   getAll,
-  getById
+  getById, 
+  create,
 }
