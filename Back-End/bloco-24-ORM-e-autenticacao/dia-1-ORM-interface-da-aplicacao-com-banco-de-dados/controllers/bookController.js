@@ -45,9 +45,21 @@ const update = async (req, res) => {
   }
 }
 
+const destroy = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const destroyBook = await Books.destroy({ where: { id } });
+    return res.status(200).json(destroyBook);
+  } catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ message: 'Algo deu errado'});
+  }
+}
+
 module.exports = {
   getAll,
   getById, 
   create,
   update,
+  destroy,
 }
