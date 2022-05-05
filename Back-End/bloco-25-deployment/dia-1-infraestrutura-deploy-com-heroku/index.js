@@ -4,7 +4,7 @@ const app = express();
 const TEXT = process.env.TEXT;
 
 app.get('/', (req, res) => {
-  return res.status(200).send(`${TEXT}!!!`)
+  return res.status(200).send(`<h1>${TEXT}</h1>`)
 });
 
 const PORT = process.env.PORT;
