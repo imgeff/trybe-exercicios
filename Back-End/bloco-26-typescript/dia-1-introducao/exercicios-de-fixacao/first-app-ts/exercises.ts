@@ -26,6 +26,10 @@ export function rectangle(base: number, height: number): number {
   return base * height;
 }
 
-export function losangle(D: number, d: number): number {
-  return (D * d) / 2;
+export function losangle(diagonalLarger: number, diagonalSmaller: number): number {
+  return (diagonalLarger * diagonalSmaller) / 2;
+}
+
+export function trapeze(baseLarger: number, baseSmaller: number, height: number) : number {
+  return ((baseLarger + baseSmaller) * height) / 2;
 }
