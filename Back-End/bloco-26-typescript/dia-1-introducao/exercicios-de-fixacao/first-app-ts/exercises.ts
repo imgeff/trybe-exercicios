@@ -25,3 +25,7 @@ export function square(side: number): number {
 export function rectangle(base: number, height: number): number {
   return base * height;
 }
+
+export function losangle(D: number, d: number): number {
+  return (D * d) / 2;
+}
