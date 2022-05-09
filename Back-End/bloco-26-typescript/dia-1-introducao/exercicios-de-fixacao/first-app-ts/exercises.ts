@@ -33,3 +33,8 @@ export function losangle(diagonalLarger: number, diagonalSmaller: number): numbe
 export function trapeze(baseLarger: number, baseSmaller: number, height: number) : number {
   return ((baseLarger + baseSmaller) * height) / 2;
 }
+
+export function circle(radius: number): number {
+  const PI = 3.14;
+  return PI * (radius ** 2)
+}
