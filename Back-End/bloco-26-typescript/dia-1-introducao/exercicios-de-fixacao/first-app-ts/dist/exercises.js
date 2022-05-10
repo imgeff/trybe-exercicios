@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
+exports.circle = exports.trapeze = exports.losangle = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
 function greeter(name) {
     return `Olá ${name}!`;
 }
@@ -29,3 +29,16 @@ function rectangle(base, height) {
     return base * height;
 }
 exports.rectangle = rectangle;
+function losangle(diagonalLarger, diagonalSmaller) {
+    return (diagonalLarger * diagonalSmaller) / 2;
+}
+exports.losangle = losangle;
+function trapeze(baseLarger, baseSmaller, height) {
+    return ((baseLarger + baseSmaller) * height) / 2;
+}
+exports.trapeze = trapeze;
+function circle(radius) {
+    const PI = 3.14;
+    return PI * (radius ** 2);
+}
+exports.circle = circle;
