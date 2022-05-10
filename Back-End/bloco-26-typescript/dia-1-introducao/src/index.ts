@@ -47,7 +47,7 @@ createdAt: ${createdAt}`);
 characters.forEach(printCharacter);
 
 // Exercício 2
-enum yearMonths{
+enum yearMonths {
   Jan = 'Janeiro',
   Fev = 'Fevereiro',
   Mar = 'Março',
@@ -60,4 +60,11 @@ enum yearMonths{
   Out = 'Outubro',
   Nov = 'Novembro',
   Dez = 'Dezembro',
-}
+};
+
+enum Stations { 
+  Prim = 'Primavera',
+  Ver = 'Verão',
+  Out = 'Outono',
+  Inv = 'Inverno'
+};
