@@ -16,3 +16,10 @@ export enum direction {
   LEFT = 'esquerda',
   RIGHT = 'direita'
 }
+
+export type Slices = 4 | 6 | 8;
+
+export interface pizza {
+  flavor: string;
+  slices: Slices;
+}
