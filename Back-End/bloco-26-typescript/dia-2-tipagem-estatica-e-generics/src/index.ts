@@ -1,67 +1,45 @@
-// exercicio 1
-enum color {
-  BLACK = 'preta',
-  WHITE = 'branca',
-  RED = 'vermelha',
-  SILVER = 'prata'
-}
+import { Car } from "./classes";
+import { color, direction, door } from "./types";
 
-enum door {
-  FRONT_RIGHT = 'porta da frente direita',
-  FRONT_LEFT = 'porta da frente esquerda',
-  BACK_LEFT = 'porta de trás esquerda',
-  BACK_RIGHT = 'porta de trás direita'
-}
+const gol = new Car('volkswagen gol', color.SILVER, 4 );
 
-enum direction {
-  LEFT = 'esquerda',
-  RIGHT = 'direita'
-}
-
-class Car {
-  brand: string;
-  doors: number;
-  color: color;
-
-  constructor(brand: string, doors: number, color: color) {
-    this.brand = brand;
-    this.doors = doors;
-    this.color = color;
-  }
-
-  honk(): void {
-    console.log('PEMP PEMP');
-  }
-
-  openTheDoor(door: door): void {
-    console.log(`Abre a ${door}`);
-  }
-
-  closeTheDoor(door: door): void {
-    console.log(`Fecha a ${door}`);
-  }
-
-  turnOn(brand: string, doors: number, color: color): void {
-    console.log(`${brand} ${color} de ${doors} portas Ligado!`);
-  }
-
-  turnOff(brand: string, doors: number, color: color): void {
-    console.log(`${brand} ${color} de ${doors} portas Desligado!`);
-  }
-
-  speedUp(): void {
-    console.log('Acelerando...');
-  }
-
-  speedDown(): void{
-    console.log('Diminuindo a velocidade...');
-  }
-
-  stop(): void {
-    console.log('Parando o carro...');
-  }
-
-  turn(direction: direction): void {
-    console.log(`Virando o  carro para a ${direction}`);
-  }
-}
+gol.openTheDoor(door.FRONT_LEFT);
+gol.closeTheDoor(door.FRONT_LEFT);
+gol.turnOn();
+gol.speedUp();
+gol.speedDown();
+gol.turn(direction.LEFT);
+gol.speedUp();
+gol.speedDown();
+gol.turn(direction.RIGHT);
+gol.speedUp();
+gol.speedUp();
+gol.speedDown();
+gol.turn(direction.RIGHT);
+gol.speedUp();
+gol.speedDown();
+gol.speedDown();
+gol.turnOff();
+gol.honk();
+gol.openTheDoor(door.BACK_RIGHT);
+gol.closeTheDoor(door.BACK_RIGHT);
+gol.turnOn();
+gol.speedUp();
+gol.speedDown();
+gol.turn(direction.RIGHT);
+gol.speedUp();
+gol.speedUp();
+gol.speedUp();
+gol.speedDown();
+gol.turn(direction.LEFT);
+gol.speedUp();
+gol.speedDown();
+gol.turn(direction.RIGHT);
+gol.speedUp();
+gol.speedDown();
+gol.speedDown();
+gol.turnOff();
+gol.openTheDoor(door.BACK_RIGHT);
+gol.closeTheDoor(door.BACK_RIGHT);
+gol.turnOn();
+gol.speedUp();
