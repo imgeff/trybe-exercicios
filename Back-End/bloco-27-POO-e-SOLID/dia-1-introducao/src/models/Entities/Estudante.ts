@@ -17,6 +17,18 @@ class Estudante {
     this.nome = nome;
     this.notas = notas;
   }
+
+  somaNotas (): number {
+    const notasArr: number[] = Object.values(this.notas);
+    let soma: number = 0;
+    notasArr.forEach((nota) => soma+= nota);
+    return soma;
+  }
+
+  mediaNotas (): number {
+    const media: number = this.somaNotas() / 6;
+    return media;
+  }
 }
 
 export default Estudante;
