@@ -1,10 +1,13 @@
 export default class Person {
-  private _name: string = '';
+  protected _name: string = '';
   private _birthDate: string = '01-01-1970';
 
   constructor (name: string, birthDate: string) {
-    this.name = name;
-    this.birthDate = birthDate;
+    if (name.length < 3) {
+      throw new Error('O nome deve ter no mínimo 3 caracteres');
+    }
+    this._name = name;
+    this._birthDate = birthDate;
   }
 
   get name () {
@@ -16,9 +19,6 @@ export default class Person {
   }
 
   set name (name: string) {
-    if (name.length < 3) {
-      throw new Error('O nome deve ter no mínimo 3 caracteres');
-    }
     this._name = name;
   }
 
