@@ -1,50 +1,52 @@
 import { randomUUID } from "crypto";
+import IEnrollable from "./Interfaces/IEnrollable";
 import Person from "./Person";
 
 
-export default class Student extends Person {
-  private _enrollment: string = randomUUID();
+export default class Student extends Person implements IEnrollable {
+  private _enrollment: string;
   private _examsGrades: number[] = [];
   private _worksGrades: number[] = [];
 
   constructor (name: string, birthDate: string) {
     super(name, birthDate);
+    this._enrollment = this.generateEnrollment();
   }
 
-  get enrollment () {
+  public get enrollment () {
     return this._enrollment;
   }
 
-  get examsGrades () {
+  public get examsGrades () {
     return this._examsGrades;
   }
 
-  get worksGrades () {
+  public get worksGrades () {
     return this._worksGrades;
   }
 
-  set examsGrades (examsGrades: number[]) {
+  public set examsGrades (examsGrades: number[]) {
     if (examsGrades.length > 4) throw new Error('O máximo é 4 notas de provas');
     this._examsGrades = examsGrades;
   }
 
-  set worksGrades (worksGrades: number[]) {
+  public set worksGrades (worksGrades: number[]) {
     if (worksGrades.length > 2) throw new Error('O máximo é 2 notas de trabalho');
     this._worksGrades = worksGrades;
   }
 
-  generateEnrollment() {
-    return this._enrollment;
+  public generateEnrollment() {
+    return randomUUID();
   }
 
-  somaNotas (): number {
+  public somaNotas (): number {
     const notasArr: number[] = this._examsGrades.concat(this._worksGrades);
     let soma: number = 0;
     notasArr.forEach((nota) => soma+= nota);
     return soma;
   }
 
-  mediaNotas (): number {
+  public mediaNotas (): number {
     const media: number = this.somaNotas() / 6;
     return media;
   }
