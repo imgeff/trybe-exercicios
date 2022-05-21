@@ -1,6 +1,6 @@
-export default class Person {
+export default abstract class Person {
   protected _name: string = '';
-  private _birthDate: string = '01-01-1970';
+  protected _birthDate: string = '01-01-1970';
 
   constructor (name: string, birthDate: string) {
     if (name.length < 3) {
@@ -32,7 +32,3 @@ export default class Person {
   }
 
 }
-
-const zoe = new Person('Zoe', '1999-07-13');
-const enzo = new Person('Enzo', '2000-11-09');
-console.log(zoe, enzo);

@@ -11,10 +11,6 @@ export default class Student extends Person {
     super(name, birthDate);
   }
 
-  get name () {
-    return this._name;
-  }
-
   get enrollment () {
     return this._enrollment;
   }
