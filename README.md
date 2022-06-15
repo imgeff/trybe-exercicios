@@ -220,9 +220,9 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 32: Arquitetura de Software
 
-- [ ] 32-1: _Arquitetura - Princí­pios SOLID_
-- [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 32-3: _Arquitetura de Software - DDD_
+- [X] 32-1: _Arquitetura - Princí­pios SOLID_
+- [X] 32-2: _ORM - Interface da aplicação com o banco de dados_
+- [X] 32-3: _Arquitetura de Software - DDD_
 - [ ] 32-4: _Boas práticas na escrita de testes_
 - [X] 32-3: _[Projeto - API de Blogs]()_
 
