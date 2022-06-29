@@ -8,4 +8,9 @@ export class WorldCupModel {
     const editionsCup = await this.WorldCupModel.find({}, { _id: false, year: true });
     return editionsCup;
   }
+
+  public getByYear = async (year: number) => {
+    const editionCup = await this.WorldCupModel.findOne({ year });
+    return editionCup;
+  }
 }

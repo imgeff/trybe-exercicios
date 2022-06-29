@@ -4,6 +4,8 @@ import { WorldCupController } from "../controllers/WorldCupController";
 const controler = new WorldCupController();
 const route = Router();
 
-route.get('/', controler.getEditionsCup)
+route.get('/', controler.getEditionsCup);
+
+route.get('/:year', controler.getByYear);
 
 export default route;
