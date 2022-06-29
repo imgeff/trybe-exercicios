@@ -18,4 +18,33 @@ export class WorldCupController {
       return res.status(404).json({ message: error.message });
     }
   }
+
+  public createWorldCup = async (req: Request, res: Response) => {
+    const {
+      year,
+      hostCountry,
+      champions,
+      runnerUp,
+      editionGoals,
+      editionStrikers,
+      bestPlayer,
+      bestGoalkeeper,
+      bestYoungPlayer,
+    } = req.body
+
+    const worldCup = {
+      year,
+      hostCountry,
+      champions,
+      runnerUp,
+      editionGoals,
+      editionStrikers,
+      bestPlayer,
+      bestGoalkeeper,
+      bestYoungPlayer,
+    }
+
+    const worldCupCreated = await this.service.createWorldCup(worldCup);
+    return res.status(200).json(worldCupCreated);
+  }
 }

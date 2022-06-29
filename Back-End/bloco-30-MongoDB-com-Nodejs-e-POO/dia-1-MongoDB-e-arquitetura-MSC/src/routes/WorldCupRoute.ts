@@ -8,4 +8,6 @@ route.get('/', controler.getEditionsCup);
 
 route.get('/:year', controler.getByYear);
 
+route.post('/', controler.createWorldCup);
+
 export default route;

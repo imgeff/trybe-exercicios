@@ -13,4 +13,9 @@ export class WorldCupModel {
     const editionCup = await this.WorldCupModel.findOne({ year });
     return editionCup;
   }
+
+  public createWorldCup = async (WorldCup: IWorldCup) => {
+    const worldCupCreated = await this.WorldCupModel.create(WorldCup);
+    return worldCupCreated;
+  }
 }
