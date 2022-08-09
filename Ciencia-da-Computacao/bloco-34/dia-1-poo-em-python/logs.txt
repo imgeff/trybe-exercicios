@@ -1,0 +1,1 @@
+[DEBUG - 08/08/2022 23:57:27]: Testando se a construção da classe log foi a correta
