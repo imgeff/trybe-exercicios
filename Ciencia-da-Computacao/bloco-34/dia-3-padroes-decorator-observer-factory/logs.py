@@ -18,35 +18,39 @@ class BaseLog(ABC):
 
 
 class Log:
-    def dispara_log(message):
+    def dispara_log(self, message):
         return message
 
 
-class DecoratorLog(BaseLog):
+class LogError(Log):
     def __init__(self, log):
         self.__log = log
 
-    def dispara_log(self, message):
-        self.__log.dispara_log(message)
-
-
-class LogError(DecoratorLog):
     def dispara_log(self, message="O sistema está com erros"):
-        self.dispara_log(f"{VERMELHO}{message}{RESET}")
+        return self.__log.dispara_log(f"{VERMELHO}{message}{RESET}")
 
 
-class LogWarning(DecoratorLog):
+class LogWarning(Log):
+    def __init__(self, log):
+        self.__log = log
+
     def dispara_log(self, message="O sistema está lento"):
-        self.dispara_log(f"{LARANJA}{message}{RESET}")
+        return self.__log.dispara_log(f"{LARANJA}{message}{RESET}")
 
 
-class LogSuccess(DecoratorLog):
+class LogSuccess(Log):
+    def __init__(self, log):
+        self.__log = log
+
     def dispara_log(self, message="O sistema está funcionando"):
-        self.dispara_log(f"{VERDE}{message}{RESET}")
+        return self.__log.dispara_log(f"{VERDE}{message}{RESET}")
 
 
 if __name__ == "__main__":
     log = Log()
-    decorator_log = DecoratorLog(log)
-    log_error = LogError(decorator_log)
+    log_error = LogError(log)
+    log_warning = LogWarning(log)
+    log_sucess = LogSuccess(log)
     print(log_error.dispara_log())
+    print(log_warning.dispara_log())
+    print(log_sucess.dispara_log())
