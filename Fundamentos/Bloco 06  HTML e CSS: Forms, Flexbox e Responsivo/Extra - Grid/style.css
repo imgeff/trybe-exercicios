@@ -1,0 +1,79 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 100%;
+	grid-template-rows: 10vh 10vh 60vh 20vh;
+  gap: 10px;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer"
+  ;
+}
+
+header, nav, article, section, aside, footer {
+  border: 3px solid red;
+}
+
+header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #a0fcac;
+  grid-area: header;
+}
+
+nav {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3fca0;
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+    "article aside"
+  ;
+}
+
+article {
+  display: grid;
+  padding: 20px;
+  text-align: center;
+  background-color: #fca0c2;
+  grid-area: article;
+}
+
+section {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #a0fcf4;
+  min-height: 100%;
+}
+
+aside {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7272;
+  grid-area: aside;
+}
+
+footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #b7a0fc;
+  grid-area: footer;
+}
